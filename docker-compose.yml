@@ -1,0 +1,31 @@
+version: '3.8'
+
+services: 
+  node_backend:
+    container_name: node_backend
+    image: node-test:1.0.0
+    build: 
+      context: .
+    ports: 
+      - '8080:80'
+    environment:
+      - PGUSER=francesco
+      - PGPASSWORD=12345
+      - PGDATABASE=defaultdb
+      - PGHOST=db
+    depends_on: 
+      - db  
+  db:
+    container_name: db
+    image: 'postgres:12'
+    ports: 
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=francesco
+      - POSTGRES_PASSWORD=12345
+      - POSTGRES_DB=defaultdb
+    volumes: 
+      - pgdata1:/var/lib/postgresql/data
+
+volumes:
+  pgdata1: {}
