@@ -1,3 +1,7 @@
+## Video about this project: https://youtu.be/87G3iUl-tj0
+
+## Article about this project:https://blog.tinystacks.com/migrate-local-database-on-docker-container-to-aws
+
 ## AWS Docker Templates - Express
 
 The AWS Docker Templates for Express from TinyStacks enable launching an [Express Node.js](https://expressjs.com/) application as a Docker container using an AWS CodePipeline pipeline. The template includes its own small Express application, enabling developers to start a new Express project immediately. Developers can also take the AWS CodePipeline-specific files in this template and use them to ship an existing Express application as a Docker image on AWS. 
